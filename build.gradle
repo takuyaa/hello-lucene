@@ -7,6 +7,12 @@ version '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
+    maven {
+        url "https://repository.apache.org/snapshots/"
+        mavenContent {
+            snapshotsOnly()
+        }
+    }
 }
 
 dependencies {
@@ -14,7 +20,7 @@ dependencies {
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
 
     // Apache Lucene core
-    implementation 'org.apache.lucene:lucene-core:8.9.0'
+    implementation 'org.apache.lucene:lucene-core:9.0.0-SNAPSHOT'
 }
 
 test {
